@@ -183,50 +183,178 @@ console.log("colorMeBadd object",colorMeBadd);
 
 
 
-/*For exercises #12 - 14, declare two variables, one named "dog" and the other named "cat".  Assign a number value for each variable.*/
+/*For exercises #12 - 14, declare two variables, one named "dog" and the other named "cat".  
+Assign a number value for each variable.*/
+var dog = Math.floor(Math.random()*10+1);
+var cat = Math.floor(Math.random()*10+11);
+
+console.log("dog",dog,"cat",cat);
 
 /*12.  Declare a function named add.
 This function will take two parameters and returns the result of adding two numbers together.
 Store this value in a variable named sum and console log this variable.*/
+console.log("Exc #12");
+
+function add(input1,input2) {
+    return input1 + input2; 
+}
+var sum  = add(dog,cat);
+console.log("sum",sum);
+
 
 /*13.  Declare a function named subtract. 
 This function will take two parameters and returns the result of subtracting two numbers together. 
 Store this value in a variable named difference and console log this variable.*/
+console.log("Exc #13");
+
+function substract(input1,input2) {
+    return input2 - input1;
+}
+var difference = substract(dog,cat);
+console.log("difference",difference);
 
 /*14. Declare a function named multiply.
 This function will take two parameter and return the result of multipling two numbers together.
 Store this value in a variable named product and console log this variable.*/
+console.log("Exc #14");
+
+function multiply(input1,input2) {
+    return input1 * input2; 
+}
+var product = multiply(dog,cat);
+console.log("product",product);
+
 
 /*15.  Declare a function named dunkinDonuts.
-This function will access the value stored in the sum variable and uses this number to return the string "I eats X old fashioned donuts every morning to stay classy." X is the value stored in the sum variable.  Console log the result.  */ 
+This function will access the value stored in the sum variable and uses this number to return 
+the string "I eats X old fashioned donuts every morning to stay classy." X is the value stored 
+in the sum variable.  Console log the result.  */ 
+console.log("Exc #15");
+
+function dunkinDonuts(x) {
+    return "I eats " + x + " old fashioned donuts every morning to stay classy.";
+}
+console.log(dunkinDonuts(sum));
 
 /*16.  Declare a function named stayinClassy.
-This function will access the values store in the difference and product variables and uses these numbers to return the string "Yea, I drank X gallons of box wine and ate Y bags of Cheetos and still feel vibrant yo!"  X is the value stored at difference variable and Y is the value stored at product variable. Console.log the result.*/
+This function will access the values store in the difference and product variables and uses these numbers 
+to return the string "Yea, I drank X gallons of box wine and ate Y bags of Cheetos and still feel vibrant yo!" 
+ X is the value stored at difference variable and Y is the value stored at product variable. 
+ Console.log the result.*/
+console.log("Exc #16");
+
+function stayinClassy(x,y) {
+    return "Yea, I drank " + x + " gallons of box wine and ate " + y + " bags of Cheetos and still feel vibrant yo!";
+}
+console.log(stayinClassy(difference,product));
 
 /*17.  Declare a function named watMyName, which takes two parameters firstName and lastName.
 This function will return a string "My name is...firstName lastName."
 Invoke this function by passing in the string values of "Slim", "Shady". and console log the result.
 */
+console.log("Exc #17");
 
-/*18. Using the japanPrefectures array you created in exercise 5, create a for loop that iterates through this array and console logs the following message:
+function watMyName(firstName,lastName) {
+    return "My name is " + firstName + " " + lastName + ".";
+} 
+console.log(watMyName("Slim","Shady"));
 
-"The location at i is:  ."  and append the value of i and the value stored within the Array at that index to this string.
+/*18. Using the japanPrefectures array you created in exercise 5, create a for loop that iterates through 
+this array and console logs the following message:
+
+"The location at i is:  ."  and append the value of i and the value stored within the Array at that index 
+to this string.
 
 i.e. "The locaton at 0 is Tokyo."*/
+console.log("Exc #18");
+
+for (var i = 0; i < japanPrefectures.length; i++) {
+  console.log("The location at " + i + " is " + japanPrefectures[i] + ".");
+}
+
+
+
+
 
 /*19. Declare a variable named "oddNumbers".
-Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
+Use a for loop to add only odd numbers to an Array. 
+ Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
+console.log("Exc #19");
+
+var oddNumbers = [];
+
+for (var i = 0; i < 61; i++) {
+    if (i%2 === 1) {
+        oddNumbers.push(i);
+    }
+ } 
+console.log("odd numbers: ",oddNumbers);
+
 
 /*20.  Declare a function named "oldEnough".
-This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum legal drinking age in Antigua.
+This function takes in a number parameter age and returns a Boolean value true or false if the age is lower 
+than the minimum legal drinking age in Antigua.
 
-Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
+Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm 
+the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
+
+console.log("Exc #20");
+
+function oldEnough (age) {
+  if (age > 15) {
+      return true;
+  }else{
+      return false;
+  }
+}
+var drinkinAlready = oldEnough(16);
+console.log("age 16 can drink",drinkinAlready);
+
+
 
 /*21. Declare a function named fightDaPower.
-This function checks the value stored at the drinkinAlready variable in the previous exercise and if the value is true, return the string "I'm jumping on the next flight to Antigua." Otherwise return the string "I can't wait to be in the 5th grade!"  Console log the result.*/ 
+This function checks the value stored at the drinkinAlready variable in the previous exercise and if 
+the value is true, return the string "I'm jumping on the next flight to Antigua." Otherwise return 
+the string "I can't wait to be in the 5th grade!"  Console log the result.*/ 
+console.log("Exc #21");
 
-/*22. Declare a function named contentFiller which takes in a single parameter which will be an object.  Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the bigBox object you created in exercise 10.  Console log the result.*/
+function fightDaPower(input1Boolean) {
+    if (input1Boolean === true) {
+        return "I'm jumping on the next flight to Antigua.";
+    }else{
+        return "I can't wait to be in the 5th grade!";
+    }
+}
+console.log("drinkinAlready:",drinkinAlready,fightDaPower(drinkinAlready));
 
-/*23.  Declare a function named firstReverse which takes a single parameter str.  This function will take a string parameter being passed in and return the string in reverse order.*/
+
+/*22. Declare a function named contentFiller which takes in a single parameter which will be an object.  
+Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in 
+the bigBox object you created in exercise 10.  Console log the result.*/
+console.log("Exc #22");
+
+function contentFiller(input1Object) {
+  for (var i = 0; i < 5; i++) {
+      var randomx = Math.floor(Math.random()*20);
+      input1Object.contents[i] = randomx;
+  }
+  return input1Object;
+}
+
+console.log("bigBox object content property:",contentFiller(bigBox));
 
 
+/*23.  Declare a function named firstReverse which takes a single parameter str.  
+This function will take a string parameter being passed in and return the string in reverse order.*/
+console.log("Exc #23");
+
+var reverseStr = "";
+
+function firstReverse(str) {
+    for (var i = str.length; i >= 0; i--) {
+        reverseStr += str.charAt(i);
+    }
+    return  reverseStr;
+}
+
+console.log("happy in reverse",firstReverse("happy"));
